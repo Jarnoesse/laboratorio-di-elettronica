@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void amplificatore()
+void ampl_inv_10()
 {
 	const int nmisure = 19;
 	
@@ -32,7 +32,7 @@ TCanvas *cG = new TCanvas("cG","G(f)",200,10,600,400);
   TGraphErrors *gG = new TGraphErrors(nmisure,f,G,sf,sG);
   gG->SetMarkerSize(0.6);
   gG->SetMarkerStyle(21);
-  gG->SetTitle("G(f) frequenza taglio");
+  gG->SetTitle("Guadagno OPA invertente");
   gG->GetXaxis()->SetTitle("f [Hz]");
   gG->GetYaxis()->SetTitle("G");
   gG->Draw("AP");
@@ -43,6 +43,7 @@ TCanvas *cG = new TCanvas("cG","G(f)",200,10,600,400);
   funz1->SetParameter(0,1000); 
   funz1->SetParameter(1,10);
   funz1->SetParName(0, "frequenza taglio al quadrato");
+  funz1->SetParName(1, "guadagno massimo");
   // Talvolta è necessario imporre che un determinato parametro sia in un intervallo di validità definito. Usare
   // questa funzione solo se con SetParameter il fit non converge o se il fit converge per un valore del parametro che esce dall'intervallo
   // con significato fisico (e.g., una temperatura assoluta < 0 K).
