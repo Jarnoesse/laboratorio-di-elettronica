@@ -30,7 +30,7 @@ TCanvas *cG = new TCanvas("cG","G(f)",200,10,600,400);
   gG->SetTitle("Guadagno OPA invertente");
   gG->GetXaxis()->SetTitle("f [kHz]");
   gG->GetYaxis()->SetTitle("G");
-  gG->Draw("AP");
+  gG->Draw("AP"); 
   
   cout << "\n\n --- funzione G --- \n" <<endl;
   TF1 *funz1 = new TF1("funz1","[1]*sqrt([0]/(pow(x,2)+[0]))",0.004,200000);
