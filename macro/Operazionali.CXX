@@ -55,7 +55,26 @@ public:
 
     }
 
-    void Grafico()
+    void Grafico()          //ti ho messo qua il grafico per gli invertenti, non so se lo volessi qua dentro
+    {
+        TGraphErrors *grafico = new TGraphErrors(Nmisure,frequenza.valore,guadagno.valore,frequenza.errore,guadagno.errore);
+        grafico->SetMarkerSize(0.6);
+        grafico->SetMarkerStyle(21);
+        grafico->SetTitle("Guadagno OPA invertente");
+        grafico->GetXaxis()->SetTitle("f [kHz]");
+        grafico->GetYaxis()->SetTitle("G");
+        grafico->Draw("AP");        
+        TF1 *funz1 = new TF1("funz1","[1]*sqrt([0]/(pow(x,2)+[0]))",0.004,200000);
+        funz1->SetParameter(0,1000);
+        funz1->SetParameter(1,10);
+        funz1->SetParName(0, "frequenza taglio al quadrato");
+        funz1->SetParName(1, "guadagno massimo");
+        funz1->SetLineColor(4); 
+        grafico->Fit(funz1,"RM+");
+        gStyle->SetOptFit(1111);
+        cout << "Chi^2:" << funz1->GetChisquare() << ", number of DoF: " << funz1->GetNDF() << " (Probability: " << funz1->GetProb() << ")." << endl;
+        cout << "--------------------------------------------------------------------------------------------------------" << endl;
+    }
 
 
 
