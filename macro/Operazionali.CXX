@@ -76,6 +76,30 @@ void Invertente(int Nmisure, double Vin[], double Vin_divisione[], double Vout[]
 */
 }
 
+void leggi(double vin[], double vout[], double errvin[], double errvout[], double f[], double errf[], char filename[])
+{
+    FILE *input = fopen(filename, "r" );                                //filename è il nome del file
+    float v_in=0,v_out=0,errv_in=0,errv_out=0, freq=0, errfreq=0;                          
+    int conta=0;                                                        
+    if(!input) 
+    {
+        cout << "Error: file could not be opened" << endl;
+        exit(1);
+    }
+    while(!feof(input)) 
+    {
+        fscanf(input,"%f %f %f %f %f %f\n",&v_in, &errv_in,&v_out, &errv_out, &freq ,&errfreq); 
+        vin[conta]=v_in;
+        vout[conta]=v_out;
+        errvin[conta]=errv_in;
+        errvout[conta]=errv_out;
+        f[conta]=freq;
+        errf[conta]=errfreq;
+        ++conta;
+    }
+    fclose(input);
+}
+
 
 void Operazionali()
 {
