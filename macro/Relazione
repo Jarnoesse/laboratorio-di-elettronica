@@ -1,12 +1,19 @@
 ABSTRACT
 
-Un amplificatore operazionale è un amplificatore differenziale ad alto guadagno, caratterizzato da un'alta impedenza in ingresso, una bassa impedenza in uscita e una grande banda passante. Obiettivo di questa esperienza è caratterizzare il dispositivo facendolo funzionare prima ad anello aperto, sia in configurazione invertente che non invertente, poi ad anello chiuso, utilizzandolo per realizzare circuiti integratori, derivatori, amplificatori logaritmici e antilogaritmici, sommatori e amplificatori di differenze. Infine sono stati utilizzati due amplificatori operazionali contemporaneamente per realizzare un trigger di Schmitt, dopo aver notato che un amplificatore usato come comparatore è molto sensibile ad eventuale rumore di fondo presente in ingresso.
+Un amplificatore operazionale è un amplificatore differenziale ad alto guadagno, caratterizzato da un'alta impedenza in ingresso, una bassa impedenza in uscita e una grande banda passante. Obiettivo di questa esperienza è caratterizzare il dispositivo facendolo funzionare prima ad anello aperto, sia in configurazione invertente che non invertente, poi ad anello chiuso, utilizzandolo per realizzare circuiti integratori, derivatori, amplificatori logaritmici e antilogaritmici, sommatori e amplificatori di differenze. Infine sono stati utilizzati due amplificatori operazionali contemporaneamente per realizzare un trigger di Schmitt, dopo aver notato che un amplificatore usato come comparatore è molto sensibile ad eventuale rumore di fondo presente in ingresso. Tutti i test di compatibilià sono svolti ad un confidence level del 5%.
 
 
 STRUMENTAZIONE
 Per l'esperienza sono stati utilizzati amplificatori operazionali UA741CN, un generatore di tensione continua, un generatore di funzioni, un oscilloscopio, delle resistenze (1kOhm, 10kOhm e 2kOhm), una capacità, un diodo e un multimetro IDM 103N rs pro
 
 NON INVERTENTE
-In configurazione non invertente, il circuito amplifica un segnale che riceve sul canale non invertente, mentre il feedback torna sul canale invertente. Il guadagno a centro banda teorico per questo tipo di configurazione è 1+Rf/R. Utilizzando delle resistenze da (989+-9)kOhm e (985+-9)kOhm, il guadagno aspettato è 2.00+-0.02, mentre quello ricavato è di 1.99+-0.05. Il guadagno ricavato è dunque consistente con il valore atteso.
+In configurazione non invertente, il circuito amplifica un segnale dal generatore di funzioni che riceve sul canale non invertente, mentre il feedback torna sul canale invertente. Il guadagno a centro banda teorico per questo tipo di configurazione è 1+Rf/R. Utilizzando delle resistenze da Rf=(989+-9)Ohm e R=(985+-9)Ohm, il guadagno aspettato è 2.00+-0.02, mentre quello ricavato è di Av=(1.99+-0.05) (scriviamolo in dB che gli piace). Il guadagno ricavato è dunque consistente con il valore atteso. É stata poi realizzata una regressione dei dati con una funzione guadagno/sqrt(1+f^2/fl^2) e si è verificato che la funzione rappresenta i valori ottenuti, con un test del chi quadro passato.
+STUDIARE LE FREQUENZE
+
+INVERTENTE
+In configurazione invertente, il circuito amplifica un segnale dal generatore di funzioni che riceve sul canale invertente, con il feedback che torna anch'esso sul canale invertente. Il guadagno a centro banda teorico per questo tipo di configurazione è, in valore assoluto, Rf/R. Sono state effettuate due prese dati in configurazione invertente: nella prima sono state utilizzate delle resistenze da Rf=(989+-9)Ohm e R=(985+-9)Ohm, , con un guadagno aspettato di 1.00+-0.02, mentre nel secondo caso sono state utilizzate delle resistenze da Rf=(9.91+-0.06)kOhm e R=(985+-9)Ohm, con un guadagno aspettato di 10.0+-0.2.
+INVERTENTE 1x
+Il guadagno ricavato è Av=(0.99+-0.05) (scriviamolo in dB che gli piace), quindi compatibile con il valore atteso. É stata poi realizzata una regressione dei dati con una funzione guadagno/sqrt(1+f^2/fl^2) e si è verificato che la funzione rappresenta i valori ottenuti, con un test del chi quadro passato.
+
 
 
