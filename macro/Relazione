@@ -1,0 +1,7 @@
+ABSTRACT
+
+Un amplificatore operazionale è un amplificatore differenziale ad alto guadagno, caratterizzato da un'alta impedenza in ingresso, una bassa impedenza in uscita e una grande banda passante. Obiettivo di questa esperienza è caratterizzare il dispositivo facendolo funzionare prima ad anello aperto, sia in configurazione invertente che non invertente, poi ad anello chiuso, utilizzandolo per realizzare circuiti integratori, derivatori, amplificatori logaritmici e antilogaritmici, sommatori e amplificatori di differenze. Infine sono stati utilizzati due amplificatori operazionali contemporaneamente per realizzare un trigger di Schmitt, dopo aver notato che un amplificatore usato come comparatore è molto sensibile ad eventuale rumore di fondo presente in ingresso.
+
+
+STRUMENTAZIONE
+Per l'esperienza sono stati utilizzati amplificatori operazionali UA741CN, un generatore di tensione continua, un generatore di funzioni, un oscilloscopio, delle resistenze (1kOhm, 10kOhm e 2kOhm), una capacità, un diodo e un multimetro IDM 103N rs pro
