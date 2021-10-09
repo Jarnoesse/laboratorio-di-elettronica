@@ -5,3 +5,6 @@ Un amplificatore operazionale è un amplificatore differenziale ad alto guadagno
 
 STRUMENTAZIONE
 Per l'esperienza sono stati utilizzati amplificatori operazionali UA741CN, un generatore di tensione continua, un generatore di funzioni, un oscilloscopio, delle resistenze (1kOhm, 10kOhm e 2kOhm), una capacità, un diodo e un multimetro IDM 103N rs pro
+
+NON INVERTENTE
+In configurazione non invertente, il circuito amplifica un segnale che riceve sul canale non invertente, mentre il feedback torna sul canale invertente. Il guadagno teorico per questo tipo di configurazione è 1+Rf/R.
