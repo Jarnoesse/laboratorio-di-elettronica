@@ -6,7 +6,7 @@ Repository del corso di laboratorio di elettronica 2021/2022
  
  [Link cartella Papers](https://drive.google.com/drive/folders/1-6_dya6fJyTzA0Ef4PeTfqoZy-eUgrJy?usp=sharing).
  
-[Link cartella immagini]  ( https://drive.google.com/drive/folders/1-aJtzV9xPFhFakpdX0p3cY-f668Xl1HV)
+[Link cartella immagini](https://drive.google.com/drive/folders/1-aJtzV9xPFhFakpdX0p3cY-f668Xl1HV).
 
 # esperienze
 🔳 Linea di Ritardo
