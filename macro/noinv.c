@@ -55,7 +55,7 @@ TCanvas *cG = new TCanvas("cG","G(f)",200,10,600,400);
   gG->SetMarkerSize(0.6);
   gG->SetMarkerStyle(21);
   gG->SetTitle("Guadagno OPA non invertente");
- gG->GetXaxis()->SetTitle("f [kHz]");
+ gG->GetXaxis()->SetTitle("f [Hz]");
   gG->GetYaxis()->SetTitle("G");
   gG->Draw("AP");
 
