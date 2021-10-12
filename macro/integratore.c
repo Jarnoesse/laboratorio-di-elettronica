@@ -60,11 +60,11 @@ TCanvas *cG = new TCanvas("cG","G(f)",200,10,600,400);
   gG->Draw("AP");
 
   cout << "\n\n --- funzione G --- \n" <<endl;
-  TF1 *funz1 = new TF1("funz1","[1]*sqrt([0]/(pow(x,2)+[0]))",0.004,200000);
+  TF1 *funz1 = new TF1("funz1","[1]*sqrt(1/(pow(x/[0],2)+1))",0.004,200000);
   // Le tre seguenti linee servono per inizializzare i parametri della funzione.
   funz1->SetParameter(0,1000);
   funz1->SetParameter(1,10);
-  funz1->SetParName(0, "frequenza taglio al quadrato");
+  funz1->SetParName(0, "frequenza di taglio");
   funz1->SetParName(1, "guadagno massimo");
   // Talvolta è necessario imporre che un determinato parametro sia in un intervallo di validità definito. Usare
   // questa funzione solo se con SetParameter il fit non converge o se il fit converge per un valore del parametro che esce dall'intervallo
