@@ -31,11 +31,11 @@ const int nmisure1 = 17;
 TGraphErrors *gr1 = new TGraphErrors(nmisure10,f10,G10,sf10,sG10);
 
 
-   TF1 *funz1 = new TF1("funz1","[1]*sqrt([0]/(pow(x,2)+[0]))",0.004,200000);
+   TF1 *funz1 = new TF1("funz1","[1]*sqrt(1/(pow(x/[0],2)+1))",0.004,200000);
 
-  funz1->SetParameter(0,1000); 
+  funz1->SetParameter(0,100); 
   funz1->SetParameter(1,10);
-  funz1->SetParName(0, "frequenza taglio al quadrato");
+  funz1->SetParName(0, "frequenza di taglio");
   funz1->SetParName(1, "guadagno massimo");
 
   funz1->SetLineColor(4); 
@@ -49,11 +49,11 @@ TGraphErrors *gr1 = new TGraphErrors(nmisure10,f10,G10,sf10,sG10);
 
 TGraphErrors *gr2 = new TGraphErrors(nmisure1,f1,G1,sf1,sG1);
 
-TF1 *funz2 = new TF1("funz2","[1]*sqrt([0]/(pow(x,2)+[0]))",0.004,200000);
+TF1 *funz2 = new TF1("funz2","[1]*sqrt(1/(pow(x/[0],2)+1))",0.004,200000);
   
   funz2->SetParameter(0,1000); 
   funz2->SetParameter(1,10);
-  funz2->SetParName(0, "frequenza taglio al quadrato");
+  funz2->SetParName(0, "frequenza di taglio");
   funz2->SetParName(1, "guadagno massimo");
 
   funz2->SetLineColor(4);
