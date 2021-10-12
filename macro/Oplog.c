@@ -67,12 +67,13 @@ TCanvas *cG = new TCanvas("cG","Vo(Vs)",200,10,600,400);
   gG->Draw("AP");
 
   cout << "\n\n --- LOG --- \n" <<endl;
-  TF1 *funz1 = new TF1("funz1","[1]*log(x/[0])",0.1,16.0);
+  TF1 *funz1 = new TF1("funz1","2*[1]*log(x/(987*[0]))",0.1,16.0);
   // Le tre seguenti linee servono per inizializzare i parametri della funzione.
   //funz1->SetParameter(0,100);
-  funz1->SetParameter(1,-0.05);
-  funz1->SetParName(0, "Io*R");
-  funz1->SetParName(1, "-2Vt");
+  funz1->SetParameter(1,0.026);
+  funz1->SetParameter(0,0.00000001);
+  funz1->SetParName(0, "Io");
+  funz1->SetParName(1, "Vt");
   // Talvolta è necessario imporre che un determinato parametro sia in un intervallo di validità definito. Usare
   // questa funzione solo se con SetParameter il fit non converge o se il fit converge per un valore del parametro che esce dall'intervallo
   // con significato fisico (e.g., una temperatura assoluta < 0 K).
@@ -91,15 +92,3 @@ TCanvas *cG = new TCanvas("cG","Vo(Vs)",200,10,600,400);
 
 
 }
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
