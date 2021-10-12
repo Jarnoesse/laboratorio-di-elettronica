@@ -67,7 +67,7 @@ TCanvas *cG = new TCanvas("cG","Vo(Vs)",200,10,600,400);
   gG->Draw("AP");
 
   cout << "\n\n --- LOG --- \n" <<endl;
-  TF1 *funz1 = new TF1("funz1","2*[1]*log(x/(987*[0]))",0.1,16.0);
+  TF1 *funz1 = new TF1("funz1","-2*[1]*log(x/(987*[0]))",0.1,16.0);
   // Le tre seguenti linee servono per inizializzare i parametri della funzione.
   //funz1->SetParameter(0,100);
   funz1->SetParameter(1,0.026);
