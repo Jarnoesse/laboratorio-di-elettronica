@@ -10,6 +10,8 @@ Repository del corso di laboratorio di elettronica 2021/2022
 
 [Link foglio dati operazionali](https://docs.google.com/spreadsheets/d/1NgbLiS59NgVmHhE25dY5EEuMXuLJqpb3E43U6sZ8Y8k/edit#gid=0).
 
+[Link relazione Latex](https://www.overleaf.com/project/6165baae84acc5114b894a31).
+
 # esperienze
 🔳 Linea di Ritardo
 🔳 Operazionali
