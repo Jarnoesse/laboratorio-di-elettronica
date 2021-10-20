@@ -1,0 +1,49 @@
+\section {Configurazione dell' apparato sperimentale}
+\begin{itemize}
+    \item SiPM \textsc{ASD-NUV1S-P}.
+    \item SiPM \textsc{ASD-NUV3S-P}.
+    \item Condensatore da $(1pF)$.
+    \item 3 condensatori da $(100nF)$.
+    \item 2 resistenze da $(510\Omega)$.
+    \item 1 resistenza da $(1k\Omega)$.
+    \item Diodo LED.
+    \item Oscilloscopio Digitale \textsc{RHODE & SHWARZ RTB2004}.
+    \item Generatore di tensione \textsc{GwINSTEK GPS 4303}.
+    \item Generatore di funzioni \textsc{SIGLENT SDG1010}.
+
+\end{itemize}
+\section{Obiettivi di misura}
+Determinare la famiglia di curve caratteristiche della tensione in uscita per ciascun SiPM sollecitandolo con la luce prodotta da un diodo LED emettitore di luce blu.
+\section{Introduzione}
+Un fotomoltiplicatore al silicio è un componente elettronico costituito da un array di SPAD (Single Photon Avalange Diode), ciascuno di essi è dotato di un resistore passivo di quenching. Ognuna di queste unità è collegata ad un catodo ed ad un anodo comuni. IL SiPM lavora in “Geiger Mode” in maniera molto simile ad uno SPAD, in quanto la corrente emessa dallo SiPM sarà la somma della corrente emessa da ciascuna cella o pixel colpita da un fotone[1]. E’ possibile modellizzare la risposta dello SiPM pensando ad un parallelo di $N$ SPAD (Raffigurato in FIGURA). Per captare i segnali ottici, è necessario collegare il SiPM ad un circuito di Lettura (Rappresentato in FIGURA). Nella sua configurazione a riposo, nessuna corrente passa attravarso lo strumento ed una tensione $V_{Bias}$ setta il voltaggio di lavoro del SiPM ad una tensione superiore rispetto alla tensione di Breakdown $V_{Br}$ (circa il 10-20\% in più). Nel momento in cui un fotone colpisce uno SPAD, viene indotto un impulso a valanga $I_{AV}(T)$. Se più fotoni colpiscono ciascuno una cella differente, il SiPM produrrà una corrente proporzionale al numero di fotoni che la hanno colpita in quell’ istante. In questo modo la risultante fotocellula ha la capacità di rilevare il numero di singoli fotoni presenti nel fascio di luce che la colpisce. In realtà la risposta del SiPM non è esatta ma può essere alterata da alcuni fattori quali valanghe generate per agitazione termica, effetti di After Pulsing o di Optical Crosstalk[2,3,4]. 
+Per determinare più precisamente la risposta di ciascuno SPAD è possibile schematizzare il comportamento di quest’ ultimo con il circuito in componenti passivi raffigurato in FIGURA. Alla giunzione è applicata la tensione $V_{Bias}$, l’ impulso può essere quindi visto come la scarica della capacità di giunzione $C_j$, esso è caratterizzato da un fronte di salita rapidissismo ($\tau = R_sC_j$) dove con $R_s$ si indica la resistenza del canale di scarica dello SPAD. Tale impulso provoca una caduta di tensione su $R_q$ tale che la polarizzazione scenda sotto la tensione di Breakdown. La seconda parte dell’ impulso si compone invece di una fase di ricarica caratterizzata da $\tau’ = R_QC_j$ ,maggiore di $\tau$, che tende a riportare la tensione ai valori iniziali, superiori alla tensione di Breakdown. La funzione che cartterizza l’impulso può essere quindi scritta come:
+
+EQUAZIONE IMPULSO
+è possibile inoltre calcolare la quantità di carica spostata dall' impulso calcolando l'integrale:
+\begin{equation}
+    \int^0_{\infty} I e^{\frac{-t}{\tau}} =  \int^0_{\infty}-\tau I \frac{1}{\tau} e^{\frac{-t}{\tau}} = -\tau I e^{\frac{-t}{\tau}}|_\infty^0 = I\tau
+\end{equation}
+\section{ASD-NUV1S-P}
+Si è andati a testare inizialmente il SiPM ASD-NUVS-P caratterizzato da un area attiva di $1x1mm^2$ dove sono collocate 625 celle di area $40\mu m^2$ con assaciata resistenza di quenching $R_Q = 600k\Omega$[5]. Le misure sono state effettuate applicando un $V_{Bias}=30V$, quindi un Overvoltage di $4 V$. Tramite la funzione  “Sottrai” dell’ oscilloscopio, si è andati a studiare la curva generata dalla sottrazione delle funzioni OUT1-OUT2 (In riferimento a FIGURA).Si è utilizzata la funzione di permanenza delle linee dell’ oscilloscopio per catturare su un’ unica schermata la famiglia di curve.
+
+FOTO OSCILLOSCOPIO 1x1 quella bella stupenda magnifica
+\section{ASD-NUV3S-P}
+Si è quindi testato il SiPM ASD-NUV3S-P, costituito dallo stesso tipo di celle del precedente, ma in numero maggiore ($N = 5520$) atte a coprire un’ area di 3 mm x 3 mm. Sono state prese le misure in modo analogo a quanto fatto nel punto precedente ottenendo la seguente immagine:
+
+FOTO OSCILLOSCOPIO 3x3 quella un po’ meno bella
+
+\section{Conclusioni}
+Dalle immagini catturate tramite l' oscilloscopio si è riusciti a verificare che la forma delle curve di impulso generate dal SiPM ASD-NUV1S-P è in linea con quanto ci si sarebbe aspettati dalla teoria. Successivamente si è misurata la costante $\tau$ caratteristica della seconda fase dell' impulso, tale misura ha restituito valore ($\tau = 80\pm5ns$) in linea con quanto riportato nella scheda descrittiva dello strumento[5]. Si è inoltre riusciti a determinare il valore di tensione massimo generato dall' impulso, riportati nella TABELLA.
+Anche le misurazioni effettuate per il SiPM ASD-NUV3S-P hanno mostrato valori consistenti con quanto riportato dal costruttore: ($\tau = 80\pm5ns$) ed i valori di voltaggio riportati in TABELLA.
+Si può notare come la famiglia di curve sia divisa in gruppi di impulsi di simile altezza, questo fenomeno è dovuto al fatto che più fotoni hanno colpito diverse celle del SiPM in quel dato istante, data la sincronizzazione del fascio generato del diodo LED. è stato inoltre possibile calcolare la quantità di carica spostata da un singolo impulso per ciascun SiPM. I dati sono riportati nella TABELLA.
+
+\section{Referenze}
+[1]Acerbi, F.; Paternoster, G.; Capasso, M.; Marcante, M.; Mazzi, A.; Regazzoni, V.; Zorzi, N.; Gola, A. Silicon Photomultipliers: Technology Optimizations for Ultraviolet, Visible and Near-Infrared Range. Instruments 2019, 3, 15. https://doi.org/10.3390/instruments3010015.
+
+\noident [2]Giustolisi G, Finocchiaro P, Pappalardo A, Palumbo G. Behavioral Model of Silicon Photo-Multipliers Suitable for Transistor-Level Circuit Simulation. Electronics. 2021; 10(13):1551. https://doi.org/10.3390/electronics10131551
+
+\noident [3]Masuda T., Ang D. G., Hutzler N. R., Meisenhelder C., Sasao N., Uetake S., Wu X., DeMille D., Gabrielse G., Doyle J. M.,Yoshimura and K. . Suppression of the optical crosstalk in a multi-channel silicon photomultiplier array. 2021 https://doi.org/10.1364/OE.424460
+
+\noident [4] Mario Stipčević Commercially available Geiger mode single-photon avalanche photodiode with a very low afterpulsing probability, 2015,5,17 	arXiv:1505.04407
+
+\noindent [5] NUV SiPMs Chip Scale Package (CSP), AdvanSiD
