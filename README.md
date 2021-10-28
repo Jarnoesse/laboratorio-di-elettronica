@@ -12,6 +12,8 @@ Repository del corso di laboratorio di elettronica 2021/2022
 
 [Link relazione Latex](https://www.overleaf.com/project/6165baae84acc5114b894a31).
 
+[link foto digitale] (https://drive.google.com/drive/folders/1mcOOhIOX-m9tCeDRskMS2wCfePsndnx_?usp=sharing)
+
 # esperienze
 🔳 Linea di Ritardo
 🔳 Operazionali
