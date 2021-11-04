@@ -1,0 +1,17 @@
+NAME              "" WINDOWAPI
+
+VERSION           1.0
+
+HEAPSIZE  1048576,4096
+
+EXPORTS
+        G__cpp_dllrevnyquist_cpp_ACLiC_dict @1
+        G__set_cpp_environmentnyquist_cpp_ACLiC_dict @2
+        G__cpp_setup_tagtablenyquist_cpp_ACLiC_dict @3
+        G__cpp_setup_inheritancenyquist_cpp_ACLiC_dict @4
+        G__cpp_setup_typetablenyquist_cpp_ACLiC_dict @5
+        G__cpp_setup_memvarnyquist_cpp_ACLiC_dict @6
+        G__cpp_setup_memfuncnyquist_cpp_ACLiC_dict @7
+        G__cpp_setup_globalnyquist_cpp_ACLiC_dict @8
+        G__cpp_setup_funcnyquist_cpp_ACLiC_dict @9
+        G__cpp_setupnyquist_cpp_ACLiC_dict @10
