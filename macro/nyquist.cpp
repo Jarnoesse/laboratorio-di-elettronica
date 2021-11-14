@@ -151,3 +151,4 @@ void nyquist(const char *nomeFile, bool verbose=true)
         cout<<tempi.size();
     cout<<endl<<codiceMassimo<<endl<<codiceMinimo<<endl<<ampiezza;
 }
+ 
